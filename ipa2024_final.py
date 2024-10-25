@@ -12,6 +12,7 @@ import time
 import os
 from restconf_final import *
 from netmiko_final import gigabit_status
+from ansible_final import showrun
 
 #######################################################################################
 # 2. Assign the Webex access token to the variable ACCESS_TOKEN using environment variables.
@@ -112,8 +113,8 @@ while True:
 
         if command == "showrun" and responseMessage == 'ok':
             print("test")
-            # filename = "<!!!REPLACEME with show run filename and path!!!>"
-            # fileobject = <!!!REPLACEME with open file!!!>
+            # filename = "./backups/show_run_65070041_CSR1kv-Pod1-1"
+            # fileobject = showrun()
             # filetype = "<!!!REPLACEME with Content-type of the file!!!>"
             # postData = {
             #     "roomId": <!!!REPLACEME!!!>,
